@@ -1,12 +1,13 @@
 import unittest
 
-class School_combination:
+class SchoolCombination:
     def dfs(self, n, path, counts):
         if len(path) == n:
             counts[0] += 1
             if path[-1] == '0':
                 counts[1] += 1
             return
+        
         self.dfs(n, path + '1', counts)
         if path[-3:] != '000':
             self.dfs(n, path + '0', counts)
@@ -20,9 +21,9 @@ class School_combination:
         ans = str(counts[1])+'/'+str(counts[0])
         return ans
 
-class TestCombinationCounter(unittest.TestCase):
+class TestSchoolCombination(unittest.TestCase):
     def setUp(self):
-        self.combination_counter = School_combination()
+        self.combination_counter = SchoolCombination()
 
     def test_count_combinations(self):
         # Test case 1: n = 5
