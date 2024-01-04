@@ -1,1 +1,1 @@
-Run main.py as Python Main.py in the comment promt. 
+Run main.py as python Main.py in the comment promt. 
